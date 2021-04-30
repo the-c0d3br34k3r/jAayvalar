@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.padaiyal.utilities.aayvalar.testutils.ExceptionClassConverter;
 
 /**
  * Tests the CurrencyParameter.

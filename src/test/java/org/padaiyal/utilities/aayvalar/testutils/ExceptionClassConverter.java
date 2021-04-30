@@ -1,4 +1,4 @@
-package org.padaiyal.utilities.aayvalar.parameters;
+package org.padaiyal.utilities.aayvalar.testutils;
 
 import java.util.Objects;
 import org.junit.jupiter.api.extension.ParameterContext;
@@ -8,7 +8,7 @@ import org.junit.jupiter.params.converter.ArgumentConverter;
 /**
  * Used to convert a given string into an exception class.
  */
-class ExceptionClassConverter implements ArgumentConverter {
+public class ExceptionClassConverter implements ArgumentConverter {
 
   /**
    * Converts a given exception class string to the class object.
