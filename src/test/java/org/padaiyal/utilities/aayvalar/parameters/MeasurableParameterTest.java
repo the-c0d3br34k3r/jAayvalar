@@ -3,6 +3,7 @@ package org.padaiyal.utilities.aayvalar.parameters;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.padaiyal.utilities.aayvalar.parameters.units.UnitTypeEnumInterface;
+import org.padaiyal.utilities.aayvalar.testutils.ExceptionClassConverter;
 
 /**
  * Abstracts the unit tests for measurable parameters.
