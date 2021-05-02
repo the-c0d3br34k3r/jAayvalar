@@ -4,10 +4,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
  
-  <!-- Update the following three entries -->
-  <groupId>org.padaiyal</groupId>
-  <artifactId>mavenprojecttemplate</artifactId>
-  <version>2021.04.26</version>
+  <groupId>org.padaiyal.utilities</groupId>
+  <artifactId>aayvalar</artifactId>
+  <version>2021.05.02</version>
 
   <parent>
     <groupId>org.padaiyal</groupId>
@@ -19,9 +18,51 @@
   <distributionManagement>
     <repository>
       <id>github</id>
-      <name>jMavenProjectTemplate MVN package deployment</name>
-      <url>https://maven.pkg.github.com/padaiyal/jMavenProjectTemplate</url>
+      <name>jAayvalar MVN package deployment</name>
+      <url>https://maven.pkg.github.com/padaiyal/jAayvalar</url>
     </repository>
   </distributionManagement>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <!-- This issue is excluded from code coverage as tests will be skipped without the API key. -->
+            <exclude>**/CurrencyParameter*</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <properties>
+    <dependency.jI18n.version>2021.01.14</dependency.jI18n.version>
+    <dependency.jProperties.version>2021.01.13</dependency.jProperties.version>
+    <dependency.jacksonDataBind.version>2.12.3</dependency.jacksonDataBind.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.java.padaiyal.utilities</groupId>
+      <artifactId>i18n</artifactId>
+      <version>${dependency.jI18n.version}</version>
+      <scope>system</scope>
+      <systemPath>${pom.basedir}/i18n-2021.01.14.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>org.java.padaiyal.utilities</groupId>
+      <artifactId>properties</artifactId>
+      <version>${dependency.jProperties.version}</version>
+      <scope>system</scope>
+      <systemPath>${pom.basedir}/properties-2021.01.13.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${dependency.jacksonDataBind.version}</version>
+    </dependency>
+  </dependencies>
 </project>
