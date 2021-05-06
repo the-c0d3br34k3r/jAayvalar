@@ -4,6 +4,7 @@ import java.util.Objects;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.converter.ArgumentConversionException;
 import org.junit.jupiter.params.converter.ArgumentConverter;
+import org.padaiyal.utilities.aayvalar.regex.exceptions.InvalidRegexException;
 
 /**
  * Used to convert a given string into an exception class.
@@ -27,6 +28,7 @@ public class ExceptionClassConverter implements ArgumentConverter {
       case "NullPointerException.class" -> NullPointerException.class;
       case "IllegalArgumentException.class" -> IllegalArgumentException.class;
       case "UnsupportedOperationException.class" -> UnsupportedOperationException.class;
+      case "InvalidRegexException.class" -> InvalidRegexException.class;
       default -> throw new ArgumentConversionException(
           "Unable to parse expected exception from input string: " + expectedExceptionClassString
       );
